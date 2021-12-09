@@ -1,0 +1,16 @@
+.MapBoxContainer {
+  height: 50vh;
+}
+.MapBoxDiv {
+    width: 50%;
+  }
+@media (max-width: 768px) {
+  .MapBoxDiv {
+    width: 90%;
+  }
+}
+.leaflet-container {
+  height: 50vh;
+  width: 100%;
+}
+

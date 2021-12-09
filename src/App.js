@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import InputBox from "./components/InputBox";
+import MapBox from "./components/MapBox";
 
-function App() {
+const App = () => {
+  const [location, setLocation] = useState({
+    lat: "42.5490211",
+    lon: "-70.80368",
+  });
+  const setCoordinates = (coordinates) => {
+    setLocation(coordinates);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <InputBox submitCoordinates={setCoordinates} />
+      <MapBox coordinates={location} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
