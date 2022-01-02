@@ -25,6 +25,9 @@
       "react-app/jest"
     ]
   },
+  "devDependencies": {
+    "firebase-tools": "^7.7.0"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
